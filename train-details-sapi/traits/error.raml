@@ -1,0 +1,28 @@
+#%RAML 1.0 Trait
+uses:
+  error: ../libraries/error-types.raml
+  
+responses:  
+  400:
+    body:
+      application/json:
+        type: error.responseBody
+        example: !include ../examples/400.json
+
+  404:
+    body:
+      application/json:
+        type: error.responseBody
+        example: !include ../examples/404.json
+
+  500:
+    body:
+      application/json:
+        type: error.responseBody
+        example: !include ../examples/500.json
+
+  503:
+    body:
+      application/json:
+        type: error.responseBody
+        example: !include ../examples/503.json

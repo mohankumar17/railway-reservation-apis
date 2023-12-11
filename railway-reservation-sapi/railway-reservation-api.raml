@@ -1,0 +1,69 @@
+#%RAML 1.0
+title: railway-reservation-api
+description: "API for managing reservations"
+baseUri: https://railway.reservation/api/v1
+
+uses:
+  reservation: /libraries/reservation-types.raml
+
+traits:
+  errors: !include /traits/error.raml
+  headers: !include /traits/request-headers.raml
+  status-query: !include /traits/status-query-param.raml
+
+/reservations:
+  get:
+    is: [headers, status-query, errors]
+    responses:
+      200:
+        body:
+          application/json:
+            type: array
+            items:
+              type: reservation.ticket-details
+            example: !include /examples/reservation-fetch-status-response.json
+
+
+  /{reservationId}:
+    get:
+      is: [headers, errors]
+      responses:
+        200:
+          body:
+            application/json:
+              type: reservation.ticket-details
+              example: !include /examples/reservation-fetch-response.json
+      
+    put:
+      is: [headers, errors]
+      body:
+        application/json:
+          type: reservation.ticket-book
+          example: !include /examples/reservation-request.json
+      responses:
+          200:
+            body:
+              application/json:
+                type: reservation.ticket-update
+                example: !include /examples/reservation-update-response.json
+    delete:
+      is: [headers, errors]
+      responses:
+          200:
+            body:
+              application/json:
+                type: reservation.ticket-update
+                example: !include /examples/reservation-update-response.json
+
+  post:
+    is: [headers, errors]
+    body:
+      application/json:
+        type: reservation.ticket-book
+        example: !include /examples/reservation-request.json
+    responses:
+        201:
+          body:
+            application/json:
+              type: reservation.ticket-confirm
+              example: !include /examples/reservation-confirmation-response.json

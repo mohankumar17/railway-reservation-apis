@@ -1,0 +1,29 @@
+#%RAML 1.0 Library
+usage: "Data types of passenger-poi API"
+types:
+  upload-request:
+    type: object
+    properties:
+      bucketName:
+        type: string
+        required: true
+      fileName:
+        type: string
+        required: true
+      document:
+        type: string
+        required: true
+  upload-response:
+      properties:
+        message:
+          type: string
+          required: true
+        bucketName:
+          type: string
+          required: true
+        reservationId:
+          type: string
+          required: true
+        dateTime:
+          type: datetime
+          required: true

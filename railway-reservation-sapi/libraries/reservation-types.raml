@@ -1,0 +1,69 @@
+#%RAML 1.0 Library
+usage: "Data types of train ticket reservation"
+
+types:
+  ticket-book:
+    type: object
+    properties:
+      paymentMethod:
+        type: string
+        required: true
+      status:
+        type: string
+        required: false
+      trainId:
+        type: string
+        required: true
+      passengers:
+        type: array
+        items:
+          type: !include ../datatypes/passenger-ticket.raml
+      
+  ticket-details:
+    type: object
+    properties:
+      reservationId:
+        type: integer
+        required: true
+      reservationDate:
+        type: datetime
+        required: true
+      paymentMethod:
+        type: string
+        required: true
+      totalFare:
+        type: number
+        required: true
+      status:
+        type: string
+        required: true
+      trainId:
+        type: string
+        required: true
+      passengers:
+        type: array
+        items:
+          type: !include ../datatypes/passenger-ticket.raml
+  
+  ticket-confirm:
+    type: object
+    properties:
+      message:
+        type: string
+        required: true
+      reservationId:
+        type: integer
+        required: true
+      dateTime:
+        type: datetime
+        required: true
+
+  ticket-update:
+    type: object
+    properties:
+      message:
+        type: string
+        required: true
+      dateTime:
+        type: datetime
+        required: true

@@ -1,0 +1,49 @@
+#%RAML 1.0 Library
+usage: Data types of train details API
+
+types:
+  details:
+    type: object
+    properties:
+      trainId:
+        type: string
+      trainName:
+        type: string
+        required: false
+      sourceStation:
+        type: string
+      destinationStation:
+        type: string
+      startTime:
+        type: datetime
+      endTime:
+        type: datetime
+      classTypes:
+        type: object
+        properties:
+          General:
+            type: number
+            required: false
+          SL:
+            type: number
+            required: false
+          3AC:
+            type: number
+            required: false
+          2AC:
+            type: number
+            required: false
+          1AC:
+            type: number
+            required: false
+  
+  update-response:
+    type: object
+    properties:
+      message:
+        type: string
+      trainId:
+        type: string
+      dateTime:
+        type: datetime
+      

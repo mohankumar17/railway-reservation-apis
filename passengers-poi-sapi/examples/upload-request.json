@@ -1,0 +1,5 @@
+{
+	"bucketName": "<reservation-system-bucket-name>",
+	"fileName": "<reservationId_passengerId>",
+	"document": "<base64 encoded document string>"
+}

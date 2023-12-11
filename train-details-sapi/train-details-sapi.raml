@@ -1,0 +1,44 @@
+#%RAML 1.0
+title: train-details-sapi
+baseUri: https://train.details/api/v1
+
+uses:
+  train: libraries/train-details-types.raml
+
+traits:
+  error: !include traits/error.raml
+  headers: !include traits/request-headers.raml
+
+/trains:
+  put:
+    is: [headers, error]
+    body:
+      application/json:
+        type: train.details
+        example: !include examples/details.json
+    responses:
+      200:
+        body:
+          application/json:
+            type: train.update-response
+            example: !include examples/update-response.json
+  /{trainId}:
+    get:
+      is: [headers, error]
+      responses:
+        200:
+          body:
+            application/json:
+              type: train.details
+              example: !include examples/details.json
+    delete:
+      is: [headers, error]
+      responses:
+        200:
+          body:
+            application/json:
+              type: train.update-response
+              example: !include examples/update-response.json
+      
+
+            

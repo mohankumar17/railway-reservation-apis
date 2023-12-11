@@ -1,0 +1,40 @@
+[
+  {
+    "reservationId": 100,
+    "reservationDate": "2023-11-07T10:30:00Z",
+    "paymentMethod": "Credit Card",
+    "totalFare": 1150.50,
+    "status": "Confirmed",
+    "trainId": "TR123",
+    "passengers": [
+      {
+        "passengerId": "P1",
+        "coachNumber": "C12",
+        "seatNumber": 22,
+        "classType": "Sleeper"
+      },
+      {
+        "passengerId": "P2",
+        "coachNumber": "A5",
+        "seatNumber": 7,
+        "classType": "AC 3 Tier"
+      }
+    ]
+  },
+  {
+    "reservationId": 101,
+    "reservationDate": "2023-11-08T10:30:00Z",
+    "paymentMethod": "UPI",
+    "totalFare": 340.0,
+    "status": "Confirmed",
+    "trainId": "TR456",
+    "passengers": [
+      {
+        "passengerId": "P4",
+        "coachNumber": "F24",
+        "seatNumber": 16,
+        "classType": "Sleeper"
+      }
+    ]
+  }
+]

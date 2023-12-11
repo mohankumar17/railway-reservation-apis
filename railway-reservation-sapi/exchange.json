@@ -1,0 +1,13 @@
+{
+  "main": "railway-reservation-api.raml",
+  "name": "railway-reservation-api",
+  "groupId": "b98b97ab-1755-496f-aa80-cf17a9e56db8",
+  "assetId": "railway-reservation-api",
+  "version": "1.0.3",
+  "classifier": "raml",
+  "tags": [],
+  "descriptorVersion": "1.0.0",
+  "organizationId": "b98b97ab-1755-496f-aa80-cf17a9e56db8",
+  "apiVersion": "v1",
+  "originalFormatVersion": "1.0"
+}

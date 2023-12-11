@@ -1,0 +1,15 @@
+{
+	"trainId": "TR123",
+	"trainName": "Express 123",
+	"sourceStation": "StationA",
+	"destinationStation": "StationB",
+	"startTime": "2023-11-10T08:00:00Z",
+	"endTime": "2023-11-10T15:00:00Z",
+	"classTypes": {
+		"General": 280.50,
+		"SL": 350.40,
+		"3AC": 530.20,
+		"2AC": 780.25,
+		"1AC": 1350.80
+	}
+}

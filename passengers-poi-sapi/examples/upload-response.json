@@ -1,0 +1,6 @@
+{
+  "message": "Document uploaded successfully",
+  "bucketName": "<reservation-system-bucket-name>",
+  "reservationId": "<Capture Reservation ID>",
+  "dateTime": "2023-11-07T10:30:00Z"
+}

@@ -1,0 +1,41 @@
+#%RAML 1.0
+title: passengers-poi-sapi
+description: "API for managing passengers identity proof documents"
+baseUri: https://passengers.poi/api/v1
+
+uses:
+  passengerPOI: /libraries/passenger-poi-types.raml
+
+traits:
+  errors: !include traits/error.raml
+  headers: !include traits/request-headers.raml
+
+/upload:
+  post:
+    is: [headers, errors]
+    body:
+      application/json:
+        type: passengerPOI.upload-request
+        example: !include examples/upload-request.json
+    responses:
+      201:
+        body:
+          application/json:
+            type: passengerPOI.upload-response
+            example: !include examples/upload-response.json
+
+/fetch/{bucketName}/{fileName}:
+  uriParameters:
+    bucketName:
+      type: string
+    fileName:
+      type: string
+  get:
+    is: [headers, errors]
+    responses:
+      200:
+        body:
+          image/jpeg:
+          image/png:
+          application/pdf:
+    

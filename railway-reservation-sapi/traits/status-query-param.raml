@@ -1,0 +1,10 @@
+#%RAML 1.0 Trait
+queryParameters:
+  status:
+    type: string
+    required: true
+    enum:
+      - Confirmed
+      - NotConfirmed
+      - Cancelled
+      - Completed

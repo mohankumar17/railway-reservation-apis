@@ -1,0 +1,13 @@
+{
+  "main": "train-details-sapi.raml",
+  "name": "train-details-sapi",
+  "groupId": "b98b97ab-1755-496f-aa80-cf17a9e56db8",
+  "assetId": "train-details-sapi",
+  "version": "1.0.0",
+  "classifier": "raml",
+  "tags": [],
+  "descriptorVersion": "1.0.0",
+  "organizationId": "b98b97ab-1755-496f-aa80-cf17a9e56db8",
+  "apiVersion": "v1",
+  "originalFormatVersion": "1.0"
+}
